@@ -1,2 +1,3 @@
 ## Diagrama Lógico
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/10af7a47-f049-4cd1-841c-cd2513a874d4" />
+<img width="1637" height="1131" alt="image" src="https://github.com/user-attachments/assets/ec1f4454-97c7-4f37-bb68-a5ef57c7ecf7" />
+
