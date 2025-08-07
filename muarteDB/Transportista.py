@@ -44,9 +44,8 @@ class TransportistaCRUD:
         conn.commit()
         print("Transportista eliminado.")
         conn.close()
-    def menu_transportista():
-        transportista_crud = TransportistaCRUD()
-    
+        
+    def menu_transportista(self):
         while True:
             print("\n--- CRUD Transportista ---")
             print("1. Añadir transportista")
