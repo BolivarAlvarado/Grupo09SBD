@@ -1,7 +1,7 @@
-# **Manual de Usuario - Sistema Integrado de Gestión Muebles**
+# **Manual de Usuario - Sistema Integrado de Gestión Muebles para Empresa MUARTE**
 
 ## **1. Propósito del Sistema**
-Este sistema unifica la gestión de clientes, proveedores, servicios, reportes de avance, transportistas, pedidos y pagos para una empresa de tapizado, lacado, diseño y venta de muebles. También contempla la logística de entrega desde el taller al cliente, agilizando y optimizando los tiempos operativos.
+Este sistema de datos combina la gestión de clientes, proveedores, servicios, reportes de avance, transportistas, pedidos y pagos para la empresa MUARTE de tapizado, lacado, diseño y venta de muebles. También mejora la logística de entrega desde el taller al cliente, al hacer más eficiente los tiempos operativos por medio de usar una base de sistema de datos.
 
 ## **2. Instalación y Entorno**
 Asegúrate de tener instalado **Python** y el módulo **mysql.connector**.
