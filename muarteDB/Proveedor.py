@@ -45,9 +45,7 @@ class ProveedorCRUD:
         print("Proveedor eliminado.")
         conn.close()
 
-    def menu_proveedor():
-        proveedor_crud = ProveedorCRUD()
-    
+    def menu_proveedor(self):
         while True:
             print("\n--- CRUD Proveedor ---")
             print("1. Añadir proveedor")
