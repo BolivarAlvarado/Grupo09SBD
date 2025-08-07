@@ -4,7 +4,7 @@ from Material import menu_material
 from Pago import menu_pago
 from Pedido import menu_pedido
 from Proveedor import menu_proveedor
-from ReporteAvance import menu_reporte
+from ReporteAvance import menu_reporte_avance
 from Servicio import menu_servicio
 from Transportista import menu_transportista
 
@@ -38,7 +38,7 @@ def menu_principal():
             case "6":
                 menu_proveedor()
             case "7":
-                menu_reporte()
+                menu_reporte_avance()
             case "8":
                 menu_servicio()
             case "9":
