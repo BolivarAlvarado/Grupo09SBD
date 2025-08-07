@@ -1,4 +1,5 @@
 from db_connection import DBConnection
+import datetime
 
 class EmpleadoCRUD:
     def __init__(self):
@@ -44,3 +45,66 @@ class EmpleadoCRUD:
         conn.commit()
         print("Empleado eliminado.")
         conn.close()
+
+    def menu_empleado():
+        empleado = EmpleadoCRUD()
+        
+        while True:
+            print("\n--- CRUD Empleado ---")
+            print("1. Añadir empleado")
+            print("2. Consultar empleados")
+            print("3. Editar empleado")
+            print("4. Eliminar empleado")
+            print("0. Volver al menú principal")
+    
+            opcion = input("Seleccione una opción: ")
+    
+            match opcion:
+                case "1":
+                    print("\n--- Crear Empleado ---")
+                    try:
+                        nombre = input("Nombre del empleado: ")
+                        fecha_str = input("Fecha de ingreso (YYYY-MM-DD): ")
+                        fecha_ingreso = datetime.datetime.strptime(fecha_str, "%Y-%m-%d").date()
+                        salario = float(input("Salario mensual: "))
+                        telefono = input("Número de teléfono: ")
+                        id_servicio = int(input("ID del servicio asociado: "))
+                        empleado_crud.crear_empleado(nombre, fecha_ingreso, salario, telefono, id_servicio)
+                    except ValueError:
+                        print("Entrada inválida. Verifica los datos.")
+    
+                case "2":
+                    print("\n--- Mostrar Empleado ---")
+                    try:
+                        id_empleado = int(input("ID del empleado: "))
+                        empleado.mostrar_empleado(id_empleado)
+                    except ValueError:
+                        print("ID inválido.")
+    
+                case "3":
+                    print("\n--- Actualizar Empleado ---")
+                    try:
+                        id_empleado = int(input("ID del empleado: "))
+                        nuevo_servicio = input("Nuevo servicio: ")
+                        empleado.actualizar_empleado(id_empleado, nuevo_servicio)
+                    except ValueError:
+                        print("ID inválido.")
+    
+                case "4":
+                    print("\n--- Eliminar Empleado ---")
+                    try:
+                        id_empleado = int(input("ID del empleado a eliminar: "))
+                        confirmacion = input("¿Estás seguro? (s/n): ")
+                        if confirmacion.lower() == "s":
+                            empleado.eliminar_empleado(id_empleado)
+                        else:
+                            print("Eliminación cancelada.")
+                    except ValueError:
+                        print("ID inválido.")
+    
+                case "0":
+                    print("Volviendo al menú principal...")
+                    break
+    
+                case _:
+                    print("Opción inválida. Intente de nuevo.")
