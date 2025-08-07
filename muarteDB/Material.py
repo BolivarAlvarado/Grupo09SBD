@@ -52,3 +52,61 @@ class MaterialCRUD:
         conn.commit()
         print("Material eliminado.")
         conn.close()
+
+    def menu_material():
+        material = MaterialCRUD()
+        
+        while True:
+            print("\n--- CRUD Material ---")
+            print("1. Añadir material")
+            print("2. Consultar materiales")
+            print("3. Editar material")
+            print("4. Eliminar material")
+            print("0. Volver al menú principal")
+    
+            opcion = input("Seleccione una opción: ")
+    
+            match opcion:
+                case "1":
+                    print("\n--- Crear Material---")
+                    try:
+                        descripcion = input("Descripción del material: ")
+                        stock = int(input("Cantidad en stock: "))
+                        color = input("Color del material: ")
+                        tipo = input("Tipo de material: ")
+                        costo = float(input("Costo del material: "))
+                        stock_min = int(input("Stock mínimo: "))
+                        id_proveedor = int(input("ID del proveedor: "))
+                        material.crear_material(descripcion, stock, color, tipo, costo, stock_min, id_proveedor)
+                    except ValueError:
+                        print("Error en los datos ingresados.")
+    
+                case "2":
+                    print("\n--- Mostrar Material ---")
+                    try:
+                        id_material = int(input("ID del material: "))
+                        material.mostrar_material(id_material)
+                    except ValueError:
+                        print("ID inválido.")
+    
+                case "3":
+                    print("\n--- Actualizar Material ---")
+                    try:
+                        id_material = int(input("ID del material: "))
+                        nuevo_costo = float(input("Nuevo costo: "))
+                        material.actualizar_material(id_cliente, nuevo_costo)
+                    except ValueError:
+                        print("ID inválido.")
+    
+                case "4":
+                    print("\n--- Eliminar Material ---")
+                    try:
+                        id_material = int(input("ID del material a eliminar: "))
+                        confirmacion = input("¿Estás seguro? (s/n): ")
+                        if confirmacion.lower() == "s":
+                            material.eliminar_material(id_material)
+                        else:
+                            print("Eliminación cancelada.")
+                    except ValueError:
+                        print("ID inválido.")
+        
