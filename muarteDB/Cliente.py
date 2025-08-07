@@ -45,9 +45,7 @@ class ClienteCRUD:
         print("Cliente eliminado.")
         conn.close()
 
-    def menu_cliente():
-        cliente_crud = ClienteCRUD()
-        
+    def menu_cliente(cliente):
         while True:
             print("\n--- CRUD Cliente ---")
             print("1. Añadir cliente")
@@ -65,13 +63,13 @@ class ClienteCRUD:
                     nombre = input("Nombre: ")
                     telefono = input("Teléfono: ")
                     correo = input("Correo: ")
-                    cliente_crud.crear_cliente(direccion, nombre, telefono, correo)
+                    cliente.crear_cliente(direccion, nombre, telefono, correo)
     
                 case "2":
                     print("\n--- Mostrar Cliente ---")
                     try:
                         id_cliente = int(input("ID del cliente: "))
-                        cliente_crud.mostrar_cliente(id_cliente)
+                        cliente.mostrar_cliente(id_cliente)
                     except ValueError:
                         print("ID inválido.")
     
@@ -80,7 +78,7 @@ class ClienteCRUD:
                     try:
                         id_cliente = int(input("ID del cliente: "))
                         nuevo_correo = input("Nuevo correo: ")
-                        cliente_crud.actualizar_cliente(id_cliente, nuevo_correo)
+                        cliente.actualizar_cliente(id_cliente, nuevo_correo)
                     except ValueError:
                         print("ID inválido.")
     
@@ -90,7 +88,7 @@ class ClienteCRUD:
                         id_cliente = int(input("ID del cliente a eliminar: "))
                         confirmacion = input("¿Estás seguro? (s/n): ")
                         if confirmacion.lower() == "s":
-                            cliente_crud.eliminar_cliente(id_cliente)
+                            cliente.eliminar_cliente(id_cliente)
                         else:
                             print("Eliminación cancelada.")
                     except ValueError:
