@@ -44,3 +44,61 @@ class ClienteCRUD:
         conn.commit()
         print("Cliente eliminado.")
         conn.close()
+
+    def menu_cliente():
+        cliente_crud = ClienteCRUD()
+        
+        while True:
+            print("\n--- CRUD Cliente ---")
+            print("1. Añadir cliente")
+            print("2. Consultar clientes")
+            print("3. Editar cliente")
+            print("4. Eliminar cliente")
+            print("0. Volver al menú principal")
+    
+            opcion = input("Seleccione una opción: ")
+    
+            match opcion:
+                case "1":
+                    print("\n--- Crear Cliente ---")
+                    direccion = input("Dirección: ")
+                    nombre = input("Nombre: ")
+                    telefono = input("Teléfono: ")
+                    correo = input("Correo: ")
+                    cliente_crud.crear_cliente(direccion, nombre, telefono, correo)
+    
+                case "2":
+                    print("\n--- Mostrar Cliente ---")
+                    try:
+                        id_cliente = int(input("ID del cliente: "))
+                        cliente_crud.mostrar_cliente(id_cliente)
+                    except ValueError:
+                        print("ID inválido.")
+    
+                case "3":
+                    print("\n--- Actualizar Cliente ---")
+                    try:
+                        id_cliente = int(input("ID del cliente: "))
+                        nuevo_correo = input("Nuevo correo: ")
+                        cliente_crud.actualizar_cliente(id_cliente, nuevo_correo)
+                    except ValueError:
+                        print("ID inválido.")
+    
+                case "4":
+                    print("\n--- Eliminar Cliente ---")
+                    try:
+                        id_cliente = int(input("ID del cliente a eliminar: "))
+                        confirmacion = input("¿Estás seguro? (s/n): ")
+                        if confirmacion.lower() == "s":
+                            cliente_crud.eliminar_cliente(id_cliente)
+                        else:
+                            print("Eliminación cancelada.")
+                    except ValueError:
+                        print("ID inválido.")
+    
+                case "0":
+                    print("Volviendo al menú principal...")
+                    break
+    
+                case _:
+                    print("Opción inválida. Intente de nuevo.")
