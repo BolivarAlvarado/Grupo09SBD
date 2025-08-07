@@ -15,10 +15,12 @@ self.user = "adminmuarte"
 self.password = "awp2210S@"
 self.database = "muarteDB"
 ```
+
+
 ## **3. Estructura y Navegación del Menú Principal**
 Al iniciar la aplicación, verás el siguiente menú principal:
 
----
+
 
 ### **Menú Principal**
 
@@ -31,10 +33,11 @@ Al iniciar la aplicación, verás el siguiente menú principal:
 7. **Pago**
 0. **Salir**
 
+
 ## **4. Uso de Cada Menú CRUD**
 Cada uno de los módulos (Cliente, Proveedor, etc.) sigue esta estructura estándar:
 
----
+
 
 ### **CRUD [Nombre del Módulo]**
 
@@ -52,6 +55,19 @@ Cada uno de los módulos (Cliente, Proveedor, etc.) sigue esta estructura están
 - **Editar**: Solicita un ID y un campo a modificar (por ejemplo, correo, precio, estado).
 - **Eliminar**: Pregunta por ID, solicita confirmación (s/n) y elimina si se confirma.
 - **Volver**: Regresa al menú principal.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Diagrama Lógico
