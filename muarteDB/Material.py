@@ -53,9 +53,7 @@ class MaterialCRUD:
         print("Material eliminado.")
         conn.close()
 
-    def menu_material():
-        material = MaterialCRUD()
-        
+    def menu_material(self):
         while True:
             print("\n--- CRUD Material ---")
             print("1. Añadir material")
