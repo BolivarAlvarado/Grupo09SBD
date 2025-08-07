@@ -1,6 +1,7 @@
-from Cliente import ClienteCRUD
+from Cliente import menu_cliente
 
-cliente = ClienteCRUD()
+def menu_principal():
+  
 
 # Pruebas
 #cliente.crear_cliente("Av. Central", "Luis Perez", "099999999", "luis@gmail.com")
