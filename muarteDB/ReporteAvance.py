@@ -44,9 +44,8 @@ class ReporteAvanceCRUD:
         conn.commit()
         print("Reporte de avance eliminado.")
         conn.close()
-    def menu_reporte_avance():
-        reporte_crud = ReporteAvanceCRUD()
-    
+        
+    def menu_reporte_avance(self):
         while True:
             print("\n--- CRUD Reporte de Avance ---")
             print("1. Añadir reporte")
