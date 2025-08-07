@@ -44,9 +44,8 @@ class PedidoCRUD:
         conn.commit()
         print("Pedido eliminado.")
         conn.close()
-    def menu_pedido():
-        pedido_crud = PedidoCRUD()
-    
+        
+    def menu_pedido(self):
         while True:
             print("\n--- CRUD Pedido ---")
             print("1. Añadir pedido")
