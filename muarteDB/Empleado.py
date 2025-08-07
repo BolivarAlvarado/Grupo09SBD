@@ -46,9 +46,7 @@ class EmpleadoCRUD:
         print("Empleado eliminado.")
         conn.close()
 
-    def menu_empleado():
-        empleado = EmpleadoCRUD()
-        
+    def menu_empleado(self):
         while True:
             print("\n--- CRUD Empleado ---")
             print("1. Añadir empleado")
