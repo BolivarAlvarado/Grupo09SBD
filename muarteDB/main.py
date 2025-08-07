@@ -1,12 +1,12 @@
-from Cliente import menu_cliente
-from Empleado import menu_empleado
-from Material import menu_material
-from Pago import menu_pago
-from Pedido import menu_pedido
-from Proveedor import menu_proveedor
-from ReporteAvance import menu_reporte_avance
-from Servicio import menu_servicio
-from Transportista import menu_transportista
+from Cliente import ClienteCRUD
+from Empleado import EmpleadoCRUD
+from Material import MaterialCRUD
+from Pago import PagoCRUD
+from Pedido import PedidoCRUD
+from Proveedor import ProveedorCRUD
+from ReporteAvance import ReporteAvanceCRUD
+from Servicio import ServicioCRUD
+from Transportista import TransportistaCRUD
 
 def menu_principal():
   while True:
@@ -26,23 +26,32 @@ def menu_principal():
 
         match opcion:
             case "1":
-                menu_cliente()
+                cliente = ClienteCRUD()
+                cliente.menu_cliente()
             case "2":
-                menu_empleado()
+                empleado = EmpleadoCRUD()
+                empleado.menu_empleado()
             case "3":
-                menu_material()
+                material = MaterialCRUD()
+                material.menu_material()
             case "4":
-                menu_pago()
+                pago = PagoCRUD()
+                pago.menu_pago()
             case "5":
-                menu_pedido()
+                pedido = PedidoCRUD()
+                pedido.menu_pedido()
             case "6":
-                menu_proveedor()
+                proveedor = ProveedorCRUD()
+                proveedor.menu_proveedor()
             case "7":
-                menu_reporte_avance()
+                reporte_crud = ReporteAvanceCRUD()
+                reporte_crud.menu_reporte_avance()
             case "8":
-                menu_servicio()
+                servicio = ServicioCRUD()
+                servicio.menu_servicio()
             case "9":
-                menu_transportista()
+                transportista = TransportistaCRUD()
+                transportista.menu_transportista()
             case "0":
                 print("Saliendo del sistema...")
                 break
@@ -50,7 +59,7 @@ def menu_principal():
                 print("Opción inválida.")
 
 if __name__ == "__main__":
-    main()
+    menu_principal()
   
 
 # Pruebas
