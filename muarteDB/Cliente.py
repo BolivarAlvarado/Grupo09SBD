@@ -45,7 +45,9 @@ class ClienteCRUD:
         print("Cliente eliminado.")
         conn.close()
 
-    def menu_cliente(cliente):
+    def menu_cliente():
+        cliente = ClienteCRUD()
+        
         while True:
             print("\n--- CRUD Cliente ---")
             print("1. Añadir cliente")
