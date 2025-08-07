@@ -47,9 +47,8 @@ class ServicioCRUD:
         conn.commit()
         print("Servicio eliminado.")
         conn.close()
-    def menu_servicio():
-        servicio_crud = ServicioCRUD()
-    
+        
+    def menu_servicio(self):
         while True:
             print("\n--- CRUD Servicio ---")
             print("1. Añadir servicio")
