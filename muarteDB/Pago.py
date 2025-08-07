@@ -45,9 +45,7 @@ class PagoCRUD:
         print("Pago eliminado.")
         conn.close()
     
-    def menu_pago():
-        pago_crud = PagoCRUD()
-    
+    def menu_pago(self):
         while True:
             print("\n--- CRUD Pago ---")
             print("1. Registrar pago")
