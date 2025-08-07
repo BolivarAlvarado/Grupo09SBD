@@ -14,7 +14,7 @@ self.port = 18480
 self.user = "adminmuarte"
 self.password = "awp2210S@"
 self.database = "muarteDB"
-
+```
 ## **3. Estructura y Navegación del Menú Principal**
 Al iniciar la aplicación, verás el siguiente menú principal:
 
