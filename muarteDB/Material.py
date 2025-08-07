@@ -109,4 +109,11 @@ class MaterialCRUD:
                             print("Eliminación cancelada.")
                     except ValueError:
                         print("ID inválido.")
+
+                case "0":
+                    print("Volviendo al menú principal...")
+                    break
+    
+                case _:
+                    print("Opción inválida. Intente de nuevo.")
         
