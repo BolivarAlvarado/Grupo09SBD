@@ -3,8 +3,8 @@ import mysql.connector
 class DBConnection:
     def __init__(self):
         self.host = "0.tcp.sa.ngrok.io"
-        self.port = 18480
-        self.user = "adminmuarte"
+        self.port = 14193
+        self.user = "adminmuarte_2"
         self.password = "awp2210S@"
         self.database = "muarteDB" 
 
